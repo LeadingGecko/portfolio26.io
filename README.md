@@ -1,4 +1,4 @@
-# ⚡ Giancarlo Passanante — Portfolio
+# ⚡ Giancarlo Perrone — Portfolio
 
 > Embedded Systems & IoT Engineer. Building at the intersection of hardware and intelligence.
 
