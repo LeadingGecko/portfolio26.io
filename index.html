@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Giancarlo Perrone | Embedded Systems &amp; IoT</title>
+  <meta name="description" content="Engineering portfolio of Giancarlo Perrone — embedded systems, TinyML, and IoT.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;800;900&family=Share+Tech+Mono&family=Exo+2:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ░░ PCB CANVAS BACKGROUND ░░ -->
+  <canvas id="pcb-canvas" aria-hidden="true"></canvas>
+
+  <!-- ░░ NAVIGATION ░░ -->
+  <nav id="navbar">
+    <div class="nav-logo">G<span class="accent">.</span>PERRONE</div>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">&#9776;</button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#about">About</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+      <li>
+        <a href="https://github.com/yourusername" target="_blank" class="nav-cta">
+          GitHub &#8599;
+        </a>
+      </li>
+    </ul>
+  </nav>
+
+  <!-- ░░ HERO ░░ -->
+  <section id="hero">
+    <div class="hero-inner">
+      <div class="hero-badge">[ Embedded Systems &middot; IoT &middot; TinyML ]</div>
+      <h1 class="hero-name">GIANCARLO<br>PERRONE</h1>
+      <div class="hero-subtitle" id="heroSubtitle"></div>
+      <p class="hero-desc">
+        Building at the intersection of hardware and intelligence.
+        From microcontrollers to neural networks &mdash; I engineer systems
+        that sense, think, and adapt in the real world.
+      </p>
+      <div class="hero-links">
+        <a href="mailto:your@gmail.com" class="hero-btn">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M22 7l-10 7L2 7"/></svg>
+          Gmail
+        </a>
+        <a href="https://linkedin.com/in/yourprofile" target="_blank" class="hero-btn">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+          LinkedIn
+        </a>
+        <a href="https://github.com/yourusername" target="_blank" class="hero-btn">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0020 4.77 5.07 5.07 0 0019.91 1S18.73.65 16 2.48a13.38 13.38 0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 005 4.77a5.44 5.44 0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 009 18.13V22"/></svg>
+          GitHub
+        </a>
+      </div>
+      <div class="scroll-hint">
+        <span>SCROLL</span>
+        <div class="scroll-line"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ░░ ABOUT ░░ -->
+  <section id="about">
+    <div class="section-header">
+      <div class="section-label">// 01 &mdash; about</div>
+      <h2 class="section-title">WHO I AM</h2>
+    </div>
+
+    <div class="about-grid">
+      <div class="about-left">
+        <div class="about-text">
+          <p>I'm a <strong>Computer Engineering student</strong> at Marquette University with a deep focus on embedded systems, IoT, and on-device machine learning.</p>
+          <p>My work lives at the boundary between hardware and software &mdash; writing firmware for microcontrollers, training quantized neural networks that run on kilobytes of RAM, and building sensing systems that interact with the physical world.</p>
+          <p>When I'm not in the lab, I'm researching investments in the tech sector, building out homelab infrastructure, or deepening my systems programming skills.</p>
+        </div>
+
+        <div class="about-stats">
+          <div class="stat-card fi">
+            <div class="stat-val">3+</div>
+            <div class="stat-lbl">TinyML Projects</div>
+          </div>
+          <div class="stat-card fi">
+            <div class="stat-val">INT8</div>
+            <div class="stat-lbl">Quantized Deploy</div>
+          </div>
+          <div class="stat-card fi">
+            <div class="stat-val">IoT</div>
+            <div class="stat-lbl">Core Focus</div>
+          </div>
+          <div class="stat-card fi">
+            <div class="stat-val">C++</div>
+            <div class="stat-lbl">Firmware Dev</div>
+          </div>
+        </div>
+
+        <div class="terminal-block fi">
+          <div><span class="t-prompt">gp@marquette:~$</span> <span class="t-cmd">cat status.txt</span></div>
+          <div><span class="t-out">&rsaquo; Senior year engineering student &mdash; graduating 2026</span></div>
+          <div><span class="t-out">&rsaquo; Focused on TinyML deployment on constrained hardware</span></div>
+          <div><span class="t-out">&rsaquo; Open to embedded, ML, and IoT roles / internships</span></div>
+          <div><span class="t-prompt">gp@marquette:~$</span> <span class="cursor">&#9646;</span></div>
+        </div>
+      </div>
+
+      <div class="about-right">
+        <div class="skills-panel fi">
+          <div class="skill-group">
+            <div class="skill-cat">// FIRMWARE &amp; EMBEDDED</div>
+            <div class="skill-tags">
+              <span class="tag">Arduino</span><span class="tag">ESP32</span>
+              <span class="tag">C++</span><span class="tag">TFLite Micro</span>
+              <span class="tag">I2C</span><span class="tag">SPI</span><span class="tag">UART</span>
+            </div>
+          </div>
+          <div class="skill-group">
+            <div class="skill-cat">// ML &amp; DATA</div>
+            <div class="skill-tags">
+              <span class="tag">TensorFlow</span><span class="tag">Keras</span>
+              <span class="tag">LSTM</span><span class="tag">INT8 Quant</span>
+              <span class="tag">Python</span><span class="tag">NumPy</span>
+            </div>
+          </div>
+          <div class="skill-group">
+            <div class="skill-cat">// SENSORS &amp; HARDWARE</div>
+            <div class="skill-tags">
+              <span class="tag">IMU</span><span class="tag">LPS22HB</span>
+              <span class="tag">AM2320</span><span class="tag">PPG</span>
+              <span class="tag">Nano 33 BLE</span>
+            </div>
+          </div>
+          <div class="skill-group">
+            <div class="skill-cat">// INFRASTRUCTURE</div>
+            <div class="skill-tags">
+              <span class="tag">Linux</span><span class="tag">Docker</span>
+              <span class="tag">Git</span><span class="tag">Homelab</span>
+              <span class="tag">Bash</span><span class="tag">Python</span>
+            </div>
+          </div>
+          <div class="skill-group">
+            <div class="skill-cat">// COURSEWORK</div>
+            <div class="skill-tags">
+              <span class="tag">IoT / TinyML</span><span class="tag">Physics II</span>
+              <span class="tag">Global Engineering</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ░░ PROJECTS ░░ -->
+  <section id="projects">
+    <div class="section-header">
+      <div class="section-label">// 02 &mdash; work</div>
+      <h2 class="section-title">PROJECTS</h2>
+    </div>
+
+    <div class="projects-grid">
+
+      <!-- ─ Project: AQI LSTM ─ -->
+      <article class="project-card fi">
+        <div class="card-topbar">
+          <span class="mac-dot" style="background:#ff5f57"></span>
+          <span class="mac-dot" style="background:#febc2e"></span>
+          <span class="mac-dot" style="background:#28c840"></span>
+          <span class="card-filename">aqi-lstm-forecaster/</span>
+        </div>
+        <div class="card-images dual">
+          <!-- Replace with: <img class="card-img" src="images/aqi1.png" alt="AQI training curve"> -->
+          <div class="img-placeholder">
+            <span class="ph-icon">&#128225;</span>
+            <span>Add Image 1</span>
+          </div>
+          <div class="img-placeholder">
+            <span class="ph-icon">&#128200;</span>
+            <span>Add Image 2</span>
+          </div>
+        </div>
+        <div class="card-body">
+          <h3 class="card-name">AQI LSTM Forecaster</h3>
+          <p class="card-desc">
+            LSTM-based neural network for real-time air quality index prediction, quantized to INT8 and deployed on ESP32 embedded hardware via TFLite Micro. Targets inference under strict SRAM constraints.
+          </p>
+          <div class="card-tags">
+            <span class="ctag">TFLite Micro</span>
+            <span class="ctag">LSTM</span>
+            <span class="ctag">INT8 Quant</span>
+            <span class="ctag">ESP32</span>
+            <span class="ctag">Python</span>
+          </div>
+        </div>
+        <div class="card-footer">
+          <span class="card-status on">&#9679; In Progress</span>
+          <a href="https://github.com/yourusername/aqi-lstm" target="_blank" class="repo-link">
+            <svg viewBox="0 0 24 24" fill="currentColor" width="13" height="13" aria-hidden="true"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0020 4.77 5.07 5.07 0 0019.91 1S18.73.65 16 2.48a13.38 13.38 0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 005 4.77a5.44 5.44 0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 009 18.13V22"/></svg>
+            View Repo
+          </a>
+        </div>
+      </article>
+
+      <!-- ─ Project: Floor Classifier ─ -->
+      <article class="project-card fi">
+        <div class="card-topbar">
+          <span class="mac-dot" style="background:#ff5f57"></span>
+          <span class="mac-dot" style="background:#febc2e"></span>
+          <span class="mac-dot" style="background:#28c840"></span>
+          <span class="card-filename">floor-level-classifier/</span>
+        </div>
+        <div class="card-images dual">
+          <div class="img-placeholder">
+            <span class="ph-icon">&#127968;</span>
+            <span>Add Image 1</span>
+          </div>
+          <div class="img-placeholder">
+            <span class="ph-icon">&#128202;</span>
+            <span>Add Image 2</span>
+          </div>
+        </div>
+        <div class="card-body">
+          <h3 class="card-name">Floor-Level Classifier</h3>
+          <p class="card-desc">
+            Sensor fusion system using LPS22HB barometric pressure and AM2320 temperature/humidity sensors to classify building floor level. Dense neural network with INT8 TFLite quantization deployed on Arduino.
+          </p>
+          <div class="card-tags">
+            <span class="ctag">Arduino</span>
+            <span class="ctag">LPS22HB</span>
+            <span class="ctag">AM2320</span>
+            <span class="ctag">TFLite</span>
+            <span class="ctag">Dense NN</span>
+          </div>
+        </div>
+        <div class="card-footer">
+          <span class="card-status done">&#10003; Complete</span>
+          <a href="https://github.com/yourusername/floor-classifier" target="_blank" class="repo-link">
+            <svg viewBox="0 0 24 24" fill="currentColor" width="13" height="13" aria-hidden="true"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0020 4.77 5.07 5.07 0 0019.91 1S18.73.65 16 2.48a13.38 13.38 0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 005 4.77a5.44 5.44 0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 009 18.13V22"/></svg>
+            View Repo
+          </a>
+        </div>
+      </article>
+
+      <!-- ─ Project: Activity Monitor ─ -->
+      <article class="project-card fi">
+        <div class="card-topbar">
+          <span class="mac-dot" style="background:#ff5f57"></span>
+          <span class="mac-dot" style="background:#febc2e"></span>
+          <span class="mac-dot" style="background:#28c840"></span>
+          <span class="card-filename">activity-context-monitor/</span>
+        </div>
+        <div class="card-images dual">
+          <div class="img-placeholder">
+            <span class="ph-icon">&#8987;</span>
+            <span>Add Image 1</span>
+          </div>
+          <div class="img-placeholder">
+            <span class="ph-icon">&#129728;</span>
+            <span>Add Image 2</span>
+          </div>
+        </div>
+        <div class="card-body">
+          <h3 class="card-name">Activity Context Monitor</h3>
+          <p class="card-desc">
+            Wearable device on Arduino Nano 33 BLE combining IMU and PPG sensor data to classify REST / WALK / EXERCISE states in real-time using TFLite Micro on-device inference.
+          </p>
+          <div class="card-tags">
+            <span class="ctag">Nano 33 BLE</span>
+            <span class="ctag">IMU</span>
+            <span class="ctag">PPG</span>
+            <span class="ctag">TFLite Micro</span>
+            <span class="ctag">BLE</span>
+          </div>
+        </div>
+        <div class="card-footer">
+          <span class="card-status done">&#10003; Complete</span>
+          <a href="https://github.com/yourusername/activity-monitor" target="_blank" class="repo-link">
+            <svg viewBox="0 0 24 24" fill="currentColor" width="13" height="13" aria-hidden="true"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0020 4.77 5.07 5.07 0 0019.91 1S18.73.65 16 2.48a13.38 13.38 0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 005 4.77a5.44 5.44 0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 009 18.13V22"/></svg>
+            View Repo
+          </a>
+        </div>
+      </article>
+
+      <!-- ─ Project: Financial Analysis ─ -->
+      <article class="project-card fi">
+        <div class="card-topbar">
+          <span class="mac-dot" style="background:#ff5f57"></span>
+          <span class="mac-dot" style="background:#febc2e"></span>
+          <span class="mac-dot" style="background:#28c840"></span>
+          <span class="card-filename">financial-analysis-system/</span>
+        </div>
+        <div class="card-images single">
+          <div class="img-placeholder">
+            <span class="ph-icon">&#128185;</span>
+            <span>Add Screenshot</span>
+          </div>
+        </div>
+        <div class="card-body">
+          <h3 class="card-name">Financial Analysis System</h3>
+          <p class="card-desc">
+            Five-script Python pipeline for personal portfolio analysis, built around a 75% core / 25% satellite ETF framework targeting long-term moderate growth in technology and AI sectors.
+          </p>
+          <div class="card-tags">
+            <span class="ctag">Python</span>
+            <span class="ctag">Pandas</span>
+            <span class="ctag">ETF Strategy</span>
+            <span class="ctag">Data Analysis</span>
+          </div>
+        </div>
+        <div class="card-footer">
+          <span class="card-status">Personal</span>
+          <a href="https://github.com/yourusername/financial-analysis" target="_blank" class="repo-link">
+            <svg viewBox="0 0 24 24" fill="currentColor" width="13" height="13" aria-hidden="true"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0020 4.77 5.07 5.07 0 0019.91 1S18.73.65 16 2.48a13.38 13.38 0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 005 4.77a5.44 5.44 0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 009 18.13V22"/></svg>
+            View Repo
+          </a>
+        </div>
+      </article>
+
+      <!-- ─ ADD MORE CARD (template hint) ─ -->
+      <article class="project-card project-card--add fi">
+        <div class="add-card-inner">
+          <div class="add-icon">+</div>
+          <div class="add-label">Add Your Next Project</div>
+          <div class="add-hint">Duplicate a card block in index.html</div>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- ░░ CONTACT ░░ -->
+  <section id="contact">
+    <div class="section-header">
+      <div class="section-label">// 03 &mdash; contact</div>
+      <h2 class="section-title">GET IN TOUCH</h2>
+    </div>
+
+    <p class="contact-intro fi">Available for internships, research collaborations, and full-time roles in embedded systems, IoT, and ML engineering.</p>
+
+    <div class="contact-grid">
+      <a href="mailto:your@gmail.com" class="contact-card fi">
+        <div class="cc-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="24" height="24"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M22 7l-10 7L2 7"/></svg>
+        </div>
+        <div class="cc-label">EMAIL</div>
+        <div class="cc-handle">your@gmail.com</div>
+      </a>
+
+      <a href="https://linkedin.com/in/yourprofile" target="_blank" class="contact-card fi">
+        <div class="cc-icon">
+          <svg viewBox="0 0 24 24" fill="currentColor" width="24" height="24"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+        </div>
+        <div class="cc-label">LINKEDIN</div>
+        <div class="cc-handle">/in/yourprofile</div>
+      </a>
+
+      <a href="https://github.com/yourusername" target="_blank" class="contact-card fi">
+        <div class="cc-icon">
+          <svg viewBox="0 0 24 24" fill="currentColor" width="24" height="24"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0020 4.77 5.07 5.07 0 0019.91 1S18.73.65 16 2.48a13.38 13.38 0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 005 4.77a5.44 5.44 0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 009 18.13V22"/></svg>
+        </div>
+        <div class="cc-label">GITHUB</div>
+        <div class="cc-handle">@yourusername</div>
+      </a>
+    </div>
+  </section>
+
+  <!-- ░░ FOOTER ░░ -->
+  <footer>
+    <div class="footer-inner">
+      <span class="footer-name">GIANCARLO PERRONE</span>
+      <span class="footer-sep">&mdash;</span>
+      <span class="footer-school">MARQUETTE UNIVERSITY</span>
+      <span class="footer-sep">&mdash;</span>
+      <span id="year"></span>
+    </div>
+    <div class="footer-sub">Built with &#10092;/&#10093; and solder fumes</div>
+  </footer>
+
+  <script src="js/pcb.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
