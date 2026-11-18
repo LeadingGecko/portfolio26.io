@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 # ⚡ Giancarlo Passanante — Engineering & ML Portfolio
+=======
+# ⚡ Giancarlo Passanante — Portfolio
+>>>>>>> ead14b98c337ac34d87cd52ec9a1bb3e809ad07f
 
 > Embedded Systems, Autonomous Robotics & Quantitative ML Engineer. Marquette University (B.S. CompE, May 2026).
 
