@@ -1,219 +1,77 @@
-# ⚡ Giancarlo Perrone — Portfolio
+# ⚡ Giancarlo Passanante — Engineering & ML Portfolio
 
-> Embedded Systems & IoT Engineer. Building at the intersection of hardware and intelligence.
+> Embedded Systems, Autonomous Robotics & Quantitative ML Engineer. Marquette University (B.S. CompE, May 2026).
 
-![PCB Background Preview](https://img.shields.io/badge/theme-PCB%20%2F%20Embedded-00c853?style=flat-square)
-![HTML CSS JS](https://img.shields.io/badge/stack-HTML%20%2F%20CSS%20%2F%20JS-00e5ff?style=flat-square)
-![No Framework](https://img.shields.io/badge/dependencies-none-39ff14?style=flat-square)
-
----
-
-## ✨ Features
-
-- **Animated PCB Background** — Canvas-rendered circuit board with moving signal pulses, resistors, capacitors, IC chips, and copper via holes
-- **Typewriter Hero** — Rotating subtitle lines with authentic typing/deleting animation
-- **Cursor Trail** — Subtle green particle trail that follows your mouse
-- **Glitch Logo** — Hover the nav logo for a quick RGB glitch flash
-- **Project Cards** — macOS-style cards with image slots, tech tags, and GitHub links
-- **Scroll Fade-in** — Elements animate in as you scroll
-- **Mobile Responsive** — Hamburger nav, stacked grid on small screens
-- **Zero Dependencies** — Pure HTML/CSS/JS, no build step required
+![Theme Modern Obsidian](https://img.shields.io/badge/theme-Neural%20Cyber--Glass-00f0ff?style=flat-square)
+![Stack HTML CSS JS](https://img.shields.io/badge/stack-HTML%20%2F%20CSS%20%2F%20JS-8b5cf6?style=flat-square)
+![Zero Dependencies](https://img.shields.io/badge/dependencies-none-10b981?style=flat-square)
 
 ---
 
-## 📁 File Structure
+## ✨ Key Features & Architecture
+
+- **Interactive Dynamic Neural Constellation Background** — Canvas-rendered floating particle mesh with distance-reactive lines and magnetic cursor interaction (repulsion, gentle gravitation, and smooth 60fps rendering). Pauses automatically when tab is inactive.
+- **Spotlight Mega-Card: Autonomous Weather UAV** — Full-width spotlight card featuring an interactive 4-view gallery switcher (Avionics CAD, Sensor Payload Pod, Flight Telemetry Log, Bench Rig), specs matrix, and full-screen lightbox modal.
+- **Featured Card: Weather Derivatives Machine Learning Modeling** — High-impact quantitative modeling card with CME Group Heating Degree Days (HDD) forecast visualizer, 95% Monte Carlo confidence intervals, and risk mitigation specs.
+- **Modern Vibrant Typography** — Google Fonts `Space Grotesk` (display headings), `Inter` (readable UI & descriptions), and `JetBrains Mono` (terminals, metrics, and tags).
+- **Glassmorphism & Luminous Ambient Atmosphere** — Deep obsidian canvas with floating radial aurora glows (cyan `#00f0ff`, electric violet `#8b5cf6`, vibrant emerald `#10b981`), refined glass borders, and no dated CRT scanlines.
+- **Interactive Lightbox Modal** — Click any project schematic, architecture diagram, or screenshot to view in full-screen high resolution.
+- **Interactive Terminal & One-Click Copy** — Styled terminal with quick copy-to-clipboard button and visual toast notifications.
+- **Responsive Architecture** — Seamless mobile navigation, flexible grid layouts, and zero external framework dependencies.
+
+---
+
+## 📁 Repository Structure
 
 ```
 portfolio/
-├── index.html          ← Main HTML (edit content here)
-├── css/
-│   └── style.css       ← All styling and CSS variables
-├── js/
-│   ├── pcb.js          ← Canvas PCB animation engine
-│   └── main.js         ← Interactions, typewriter, scroll, cursor
+├── index.html                           ← Main portfolio (all-in-one HTML, CSS & JS)
 ├── images/
-│   └── .gitkeep        ← Drop your project screenshots here
-├── .gitignore
-└── README.md
+│   ├── uav-avionics-arch.svg            ← Vector CAD: Weather UAV Avionics Architecture
+│   ├── uav-sensor-payload.svg           ← Vector CAD: Sensor Payload Bay & Laminar Flow Duct
+│   ├── uav-telemetry.svg                ← Vector CAD: 915 MHz Telemetry & Sounding Skew-T Plot
+│   ├── weather-derivatives-ml.svg       ← Vector CAD: Quant ML HDD Forecast & CME Pricing
+│   ├── EDGE_CASE.png                    ← PRISM Edge AQI 3D Enclosure
+│   ├── EDGE_PCB.png                     ← PRISM Edge AQI Custom PCB
+│   ├── Context_Monitor.jpg              ← Activity Context Monitor Hardware
+│   ├── BLOCKDIAGRAM_CONTEXT.png         ← Activity Monitor Block Diagram
+│   ├── SETUP_GIMBAL.png                 ← Autonomous Pan-Tilt Gimbal Setup
+│   └── WORKFLOW_GIMBAL .png             ← Pan-Tilt Gimbal Tracking Workflow
+├── README.md                            ← Documentation & customization guide
+└── index.html.bak                       ← Backup of original file
 ```
 
 ---
 
-## 🔧 Customization Guide
+## 🔧 How to Customize
 
-### 1. Personal Info
+### 1. Adding Real Photos to the Weather UAV Project
+The Weather UAV project card features an interactive 4-view gallery switcher in [index.html](file:///C:/Users/Giancarlo/Documents/Github/portfolio26.io/index.html).
 
-Open `index.html` and find/replace:
-
-| Placeholder | Replace with |
-|---|---|
-| `your@gmail.com` | Your email address |
-| `https://linkedin.com/in/yourprofile` | Your LinkedIn URL |
-| `https://github.com/yourusername` | Your GitHub URL |
-| `@yourusername` | Your GitHub handle |
-| `/in/yourprofile` | Your LinkedIn handle |
-
-Update the **About** section text, terminal block lines, and stats inside `.about-stats`.
-
-### 2. Add a Project Card
-
-Copy any existing `<article class="project-card fi">` block and update:
-
+To replace any vector schematic with real photos:
+1. Save your photo into `images/` (e.g. `images/uav-photo1.jpg`).
+2. Open `index.html` and locate the thumbnail buttons inside `.gallery-thumbs-bar` (around line 690):
 ```html
-<article class="project-card fi">
-  <div class="card-topbar">
-    <span class="mac-dot" style="background:#ff5f57"></span>
-    <span class="mac-dot" style="background:#febc2e"></span>
-    <span class="mac-dot" style="background:#28c840"></span>
-    <span class="card-filename">your-repo-name/</span>
-  </div>
-  <div class="card-images dual">
-    <img class="card-img" src="images/project-screenshot1.png" alt="Screenshot 1">
-    <img class="card-img" src="images/project-screenshot2.png" alt="Screenshot 2">
-  </div>
-  <div class="card-body">
-    <h3 class="card-name">Your Project Name</h3>
-    <p class="card-desc">A short description of what this project does and why it matters.</p>
-    <div class="card-tags">
-      <span class="ctag">Tech 1</span>
-      <span class="ctag">Tech 2</span>
-    </div>
-  </div>
-  <div class="card-footer">
-    <span class="card-status on">● In Progress</span>
-    <!-- or: <span class="card-status done">✓ Complete</span> -->
-    <a href="https://github.com/yourusername/repo" target="_blank" class="repo-link">
-      <!-- github svg --> View Repo
-    </a>
-  </div>
-</article>
+<button class="gallery-thumb-btn" data-img="images/uav-photo1.jpg" data-caption="Fig 4: Field Flight Testing & Avionics Assembly">
+  <span class="thumb-label">4. Flight Photos</span>
+  <span class="thumb-sub">Field Test Assembly</span>
+</button>
 ```
 
-### 3. Add Project Images
+### 2. Updating Repository & Contact Links
+All links are pre-configured to your handles:
+- **Email**: `gcpassan@gmail.com`
+- **LinkedIn**: `https://www.linkedin.com/in/giancarlo-passanante-a46a95283/`
+- **GitHub**: `https://github.com/LeadingGecko`
+- **Goodreads**: `https://www.goodreads.com/user/show/145210950-giancarlo-passanante`
 
-Drop screenshots into the `images/` folder:
-
-```html
-<!-- Single image -->
-<div class="card-images single">
-  <img class="card-img" src="images/myproject.png" alt="Project Name">
-</div>
-
-<!-- Two images side-by-side -->
-<div class="card-images dual">
-  <img class="card-img" src="images/myproject-1.png" alt="Screenshot 1">
-  <img class="card-img" src="images/myproject-2.png" alt="Screenshot 2">
-</div>
-```
-
-### 4. Change PCB Density
-
-Open `js/pcb.js` and tweak `CFG` at the top:
-
-```js
-GRID:       52,    // ↑ bigger = more spaced out, ↓ smaller = denser
-PROB_H:     0.36,  // probability a horizontal trace is drawn (0–1)
-PROB_V:     0.36,  // probability a vertical trace is drawn (0–1)
-SIGNAL_COUNT: 50,  // number of animated signal pulses
-SPD_MIN:    70,    // slowest pulse (px/s)
-SPD_MAX:    175,   // fastest pulse (px/s)
-TRAIL_PX:   65,    // how long the glowing tail is
-```
-
-### 5. Color Scheme
-
-All colors are CSS variables in `css/style.css`:
-
-```css
-:root {
-  --trace:        #00c853;  /* PCB trace green      */
-  --trace-bright: #39ff14;  /* neon green highlights */
-  --signal:       #00ffcc;  /* signal pulse color    */
-  --accent:       #00e5ff;  /* cyan accent           */
-  --bg:           #030b06;  /* background            */
-}
-```
-
-Want a blue cyberpunk theme? Swap `--trace` to `#0080ff`, `--trace-bright` to `#00aaff`, `--signal` to `#00ffff`.
+When you create new public repositories for the Weather UAV or Weather Derivatives projects, update the `href` on `.spotlight-link-btn` inside the respective project card.
 
 ---
 
-## 🚀 Hosting Options
+## 🚀 Publishing / Deployment
 
-### ① GitHub Pages — Free, 0 config (Recommended)
+The site is 100% static with zero dependencies, ready to deploy instantly:
 
-```bash
-# Push your repo first (see Git Setup below)
-# Then in GitHub.com:
-# Settings → Pages → Source: main branch / root → Save
-# Your site: https://yourusername.github.io/portfolio
-```
-
-### ② Netlify — Free tier, instant deploys, custom domain
-
-1. [netlify.com](https://netlify.com) → **Add new site → Import from Git**
-2. Connect your GitHub repo
-3. Build command: *(leave empty)*
-4. Publish directory: `.`
-5. Click **Deploy site**
-
-Auto-deploys on every `git push`. Free custom domain support.
-
-### ③ Vercel — Free tier, fast global CDN
-
-```bash
-npm i -g vercel
-vercel --prod
-# Follows prompts, deploys in ~10s
-```
-
-Or connect via [vercel.com](https://vercel.com) → **New Project → Import from GitHub**.
-
-### ④ Cloudflare Pages — Free, best global performance
-
-1. [pages.cloudflare.com](https://pages.cloudflare.com) → **Create application → Pages**
-2. Connect GitHub repo
-3. Framework preset: **None**
-4. Build command: *(leave empty)*
-5. Deploy
-
----
-
-## 🛠️ Git Setup
-
-```bash
-# In the portfolio/ folder:
-git init
-git add .
-git commit -m "feat: initial portfolio launch"
-
-# Create repo on GitHub (requires GitHub CLI):
-gh repo create portfolio --public --push --source .
-
-# Or manually add remote:
-git remote add origin https://github.com/yourusername/portfolio.git
-git branch -M main
-git push -u origin main
-```
-
-After any edits:
-
-```bash
-git add . && git commit -m "update: add new project" && git push
-```
-
----
-
-## 🧩 Ideas to Add Later
-
-- **Dark/light mode toggle** — swap CSS variables via JS
-- **Resume PDF button** — link to a hosted PDF in `assets/`
-- **Blog section** — static markdown rendered via a tiny parser
-- **Stats widget** — GitHub contribution graph via API
-- **Contact form** — integrate Formspree or Netlify Forms (no backend)
-- **Project detail pages** — `projects/aqi-lstm.html` with full write-up
-- **Favicon** — add a PCB trace SVG favicon in the `<head>`
-
----
-
-*Built with solder fumes and late-night commits.*
+- **GitHub Pages**: Push to `main` branch &rarr; GitHub Repository Settings &rarr; Pages &rarr; Source: `main` branch `/ (root)` &rarr; Save.
+- **Vercel / Netlify / Cloudflare Pages**: Connect repository and deploy with 0 build steps.

@@ -1,0 +1,146 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 520" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0a101d"/>
+      <stop offset="100%" stop-color="#050811"/>
+    </linearGradient>
+    <linearGradient id="cyanGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00f0ff"/>
+      <stop offset="100%" stop-color="#3b82f6"/>
+    </linearGradient>
+    <linearGradient id="amberGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#f59e0b"/>
+      <stop offset="100%" stop-color="#ef4444"/>
+    </linearGradient>
+    <linearGradient id="emeraldGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#10b981"/>
+      <stop offset="100%" stop-color="#06b6d4"/>
+    </linearGradient>
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="4" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+    <pattern id="grid" width="30" height="30" patternUnits="userSpaceOnUse">
+      <path d="M 30 0 L 0 0 0 30" fill="none" stroke="rgba(255,255,255,0.04)" stroke-width="1"/>
+    </pattern>
+  </defs>
+
+  <rect width="900" height="520" fill="url(#bgGrad)"/>
+  <rect width="900" height="520" fill="url(#grid)"/>
+
+  <!-- Outer HUD Frame -->
+  <rect x="25" y="25" width="850" height="470" rx="12" fill="none" stroke="rgba(0,240,255,0.2)" stroke-width="1.5"/>
+  <path d="M 25 50 L 50 25 M 875 50 L 850 25 M 25 470 L 50 495 M 875 470 L 850 495" stroke="#00f0ff" stroke-width="2"/>
+  
+  <!-- Header Banner -->
+  <text x="50" y="62" fill="#00f0ff" font-family="'JetBrains Mono', monospace" font-size="13" font-weight="700" letter-spacing="2">AUTONOMOUS WEATHER UAV // AVIONICS SYSTEM ARCHITECTURE</text>
+  <text x="850" y="62" fill="#94a3b8" font-family="'JetBrains Mono', monospace" font-size="11" text-anchor="end" letter-spacing="1">REV 2.4 · DUAL-BUS</text>
+  <line x1="50" y1="75" x2="850" y2="75" stroke="rgba(255,255,255,0.1)" stroke-width="1"/>
+
+  <!-- Left: SENSORS & PAYLOAD -->
+  <g transform="translate(60, 110)">
+    <rect width="210" height="340" rx="8" fill="rgba(15,23,42,0.7)" stroke="rgba(16,185,129,0.4)" stroke-width="1.2"/>
+    <text x="20" y="30" fill="#34d399" font-family="'Space Grotesk', sans-serif" font-size="13" font-weight="700" letter-spacing="1">METEOROLOGICAL PAYLOAD</text>
+    
+    <rect x="15" y="48" width="180" height="52" rx="6" fill="rgba(16,185,129,0.08)" stroke="rgba(16,185,129,0.3)"/>
+    <text x="25" y="68" fill="#f8fafc" font-family="'JetBrains Mono', monospace" font-size="11" font-weight="600">BMP390 Barometer</text>
+    <text x="25" y="85" fill="#94a3b8" font-family="'JetBrains Mono', monospace" font-size="9.5">±3 Pa · 50Hz · SPI</text>
+
+    <rect x="15" y="110" width="180" height="52" rx="6" fill="rgba(16,185,129,0.08)" stroke="rgba(16,185,129,0.3)"/>
+    <text x="25" y="130" fill="#f8fafc" font-family="'JetBrains Mono', monospace" font-size="11" font-weight="600">SHT45 Temp / RH</text>
+    <text x="25" y="147" fill="#94a3b8" font-family="'JetBrains Mono', monospace" font-size="9.5">±0.1°C / ±1.0% RH · I2C</text>
+
+    <rect x="15" y="172" width="180" height="52" rx="6" fill="rgba(16,185,129,0.08)" stroke="rgba(16,185,129,0.3)"/>
+    <text x="25" y="192" fill="#f8fafc" font-family="'JetBrains Mono', monospace" font-size="11" font-weight="600">Ultrasonic Anemometer</text>
+    <text x="25" y="209" fill="#94a3b8" font-family="'JetBrains Mono', monospace" font-size="9.5">2D Wind Vector (0-40 m/s)</text>
+
+    <rect x="15" y="234" width="180" height="52" rx="6" fill="rgba(16,185,129,0.08)" stroke="rgba(16,185,129,0.3)"/>
+    <text x="25" y="254" fill="#f8fafc" font-family="'JetBrains Mono', monospace" font-size="11" font-weight="600">Particulate Matter (PM)</text>
+    <text x="25" y="271" fill="#94a3b8" font-family="'JetBrains Mono', monospace" font-size="9.5">PM1.0, PM2.5, PM10 · UART</text>
+
+    <text x="20" y="318" fill="#10b981" font-family="'JetBrains Mono', monospace" font-size="10">Sampling Rate: 20 Hz Synced</text>
+  </g>
+
+  <!-- Center: PROCESSING UNIT -->
+  <g transform="translate(345, 110)">
+    <rect width="210" height="340" rx="8" fill="rgba(15,23,42,0.85)" stroke="url(#cyanGrad)" stroke-width="2" filter="url(#glow)"/>
+    <rect width="210" height="340" rx="8" fill="rgba(15,23,42,0.9)" stroke="#00f0ff" stroke-width="1.5"/>
+    
+    <text x="20" y="32" fill="#00f0ff" font-family="'Space Grotesk', sans-serif" font-size="14" font-weight="700" letter-spacing="1">AVIONICS CORE</text>
+    <text x="20" y="50" fill="#94a3b8" font-family="'JetBrains Mono', monospace" font-size="10">STM32F4 + FreeRTOS</text>
+
+    <!-- Sub-blocks inside MCU -->
+    <rect x="15" y="65" width="180" height="58" rx="6" fill="rgba(0,240,255,0.08)" stroke="rgba(0,240,255,0.3)"/>
+    <text x="25" y="86" fill="#ffffff" font-family="'JetBrains Mono', monospace" font-size="11" font-weight="600">Extended Kalman Filter</text>
+    <text x="25" y="104" fill="#38bdf8" font-family="'JetBrains Mono', monospace" font-size="9.5">State Estimation &amp; Altitude Hold</text>
+
+    <rect x="15" y="133" width="180" height="58" rx="6" fill="rgba(0,240,255,0.08)" stroke="rgba(0,240,255,0.3)"/>
+    <text x="25" y="154" fill="#ffffff" font-family="'JetBrains Mono', monospace" font-size="11" font-weight="600">DMA Sensor Sync Buffer</text>
+    <text x="25" y="172" fill="#38bdf8" font-family="'JetBrains Mono', monospace" font-size="9.5">Zero-Latency Interleaved I/O</text>
+
+    <rect x="15" y="201" width="180" height="58" rx="6" fill="rgba(0,240,255,0.08)" stroke="rgba(0,240,255,0.3)"/>
+    <text x="25" y="222" fill="#ffffff" font-family="'JetBrains Mono', monospace" font-size="11" font-weight="600">High-Speed Flash / SD</text>
+    <text x="25" y="240" fill="#38bdf8" font-family="'JetBrains Mono', monospace" font-size="9.5">Raw Telemetry Blackbox</text>
+
+    <!-- MCU Activity Bar -->
+    <rect x="15" y="280" width="180" height="38" rx="5" fill="rgba(2,6,23,0.8)" stroke="rgba(255,255,255,0.1)"/>
+    <circle cx="30" cy="299" r="4" fill="#10b981"/>
+    <text x="42" y="303" fill="#cbd5e1" font-family="'JetBrains Mono', monospace" font-size="10">CPU Load: 18.4% · 168MHz</text>
+  </g>
+
+  <!-- Right: TELEMETRY & FLIGHT CONTROL -->
+  <g transform="translate(630, 110)">
+    <rect width="210" height="340" rx="8" fill="rgba(15,23,42,0.7)" stroke="rgba(245,158,11,0.4)" stroke-width="1.2"/>
+    <text x="20" y="30" fill="#fbbf24" font-family="'Space Grotesk', sans-serif" font-size="13" font-weight="700" letter-spacing="1">TELEMETRY &amp; COMMS</text>
+    
+    <rect x="15" y="48" width="180" height="52" rx="6" fill="rgba(245,158,11,0.08)" stroke="rgba(245,158,11,0.3)"/>
+    <text x="25" y="68" fill="#f8fafc" font-family="'JetBrains Mono', monospace" font-size="11" font-weight="600">915 MHz LoRa Link</text>
+    <text x="25" y="85" fill="#fcd34d" font-family="'JetBrains Mono', monospace" font-size="9.5">Long-Range Ground Station</text>
+
+    <rect x="15" y="110" width="180" height="52" rx="6" fill="rgba(245,158,11,0.08)" stroke="rgba(245,158,11,0.3)"/>
+    <text x="25" y="130" fill="#f8fafc" font-family="'JetBrains Mono', monospace" font-size="11" font-weight="600">MAVLink / GPS GNSS</text>
+    <text x="25" y="147" fill="#fcd34d" font-family="'JetBrains Mono', monospace" font-size="9.5">Autonomous Waypoint Nav</text>
+
+    <rect x="15" y="172" width="180" height="52" rx="6" fill="rgba(245,158,11,0.08)" stroke="rgba(245,158,11,0.3)"/>
+    <text x="25" y="192" fill="#f8fafc" font-family="'JetBrains Mono', monospace" font-size="11" font-weight="600">Power Management (PMU)</text>
+    <text x="25" y="209" fill="#fcd34d" font-family="'JetBrains Mono', monospace" font-size="9.5">4S LiPo · Dual Regulated 5V/3.3V</text>
+
+    <rect x="15" y="234" width="180" height="52" rx="6" fill="rgba(245,158,11,0.08)" stroke="rgba(245,158,11,0.3)"/>
+    <text x="25" y="254" fill="#f8fafc" font-family="'JetBrains Mono', monospace" font-size="11" font-weight="600">Ground Control UI</text>
+    <text x="25" y="271" fill="#fcd34d" font-family="'JetBrains Mono', monospace" font-size="9.5">Live Skew-T Sounding Plot</text>
+
+    <text x="20" y="318" fill="#fbbf24" font-family="'JetBrains Mono', monospace" font-size="10">Telemetry Range: &gt; 5 km LOS</text>
+  </g>
+
+  <!-- Connecting Bus Lines -->
+  <!-- Left to Center -->
+  <path d="M 270 170 L 345 170" stroke="#10b981" stroke-width="2" stroke-dasharray="4,4"/>
+  <circle cx="270" cy="170" r="3" fill="#10b981"/>
+  <circle cx="345" cy="170" r="3" fill="#00f0ff"/>
+  <text x="286" y="162" fill="#34d399" font-family="'JetBrains Mono', monospace" font-size="9">SPI/I2C</text>
+
+  <path d="M 270 290 L 345 290" stroke="#10b981" stroke-width="2" stroke-dasharray="4,4"/>
+  <circle cx="270" cy="290" r="3" fill="#10b981"/>
+  <circle cx="345" cy="290" r="3" fill="#00f0ff"/>
+  <text x="290" y="282" fill="#34d399" font-family="'JetBrains Mono', monospace" font-size="9">UART</text>
+
+  <!-- Center to Right -->
+  <path d="M 555 170 L 630 170" stroke="#00f0ff" stroke-width="2" stroke-dasharray="4,4"/>
+  <circle cx="555" cy="170" r="3" fill="#00f0ff"/>
+  <circle cx="630" cy="170" r="3" fill="#fbbf24"/>
+  <text x="568" y="162" fill="#38bdf8" font-family="'JetBrains Mono', monospace" font-size="9">USART</text>
+
+  <path d="M 555 290 L 630 290" stroke="#00f0ff" stroke-width="2" stroke-dasharray="4,4"/>
+  <circle cx="555" cy="290" r="3" fill="#00f0ff"/>
+  <circle cx="630" cy="290" r="3" fill="#fbbf24"/>
+  <text x="568" y="282" fill="#38bdf8" font-family="'JetBrains Mono', monospace" font-size="9">MAVLink</text>
+
+  <!-- Bottom Live Indicators -->
+  <g transform="translate(60, 465)">
+    <circle cx="10" cy="12" r="5" fill="#00f0ff" filter="url(#glow)"/>
+    <text x="24" y="16" fill="#e2e8f0" font-family="'JetBrains Mono', monospace" font-size="11">SYSTEM STATUS: NOMINAL</text>
+
+    <text x="350" y="16" fill="#94a3b8" font-family="'JetBrains Mono', monospace" font-size="11">SAMPLING: <tspan fill="#34d399">20 Hz ACTIVE</tspan></text>
+    <text x="580" y="16" fill="#94a3b8" font-family="'JetBrains Mono', monospace" font-size="11">AIRFRAME: <tspan fill="#00f0ff">CARBON QUAD-ROTOR</tspan></text>
+  </g>
+</svg>
